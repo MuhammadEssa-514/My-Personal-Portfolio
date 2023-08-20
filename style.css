@@ -808,6 +808,60 @@ width: 0;
   }
 
 /* for gallary portfolio end */
+
+
+/* for team flip images start */
+
+.mainbox{
+    display: flex;
+    /* justify-content: space-between; */
+    /* gap: 37px; */
+    /* flex-wrap: wrap; */
+}
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid rgb(13, 236, 13);
+    perspective: 300px; 
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: rgba(32, 255, 32, 0.624);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+/* for team flip images end */
+
+
+
 /* BREAKPOINTS */
 
 @media (max-width : 1200px) {
