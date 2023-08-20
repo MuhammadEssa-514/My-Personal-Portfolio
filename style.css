@@ -814,13 +814,12 @@ width: 0;
 
 .mainbox{
     display: flex;
-    /* justify-content: space-between; */
-    /* gap: 37px; */
-    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .flip-box {
     background-color: transparent;
-    width: 300px;
+    width: 270px;
     height: 200px;
     border: 1px solid rgb(13, 236, 13);
     perspective: 300px; 
@@ -843,17 +842,17 @@ width: 0;
     position: absolute;
     width: 80%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
   
   .flip-box-front {
-    background-color: #bbb;
+    background-color: rgba(42, 234, 17, 0.786);
     color: black;
   }
   
   .flip-box-back {
-    background-color: rgba(32, 255, 32, 0.624);
+    background-color: rgba(57, 255, 57, 0.624);
     color: white;
     transform: rotateY(180deg);
   }
