@@ -817,6 +817,11 @@ width: 0;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.myteam{
+    font-size: 5rem;
+    text-align: center;
+    padding: 20px;
+}
 .flip-box {
     background-color: transparent;
     width: 270px;
