@@ -728,13 +728,13 @@ section:nth-child(odd) .animate.scroll,
 width: 0;
 }
 
-/* for gallary portfolio start*/
+/* for gallary portfolio start======================*/
 
 * {
     box-sizing: border-box;
   }
   
-  .container {
+  .contner {
     position: relative;
   }
   
@@ -750,7 +750,7 @@ width: 0;
   .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 15%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
