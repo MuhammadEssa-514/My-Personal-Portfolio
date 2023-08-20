@@ -43,7 +43,7 @@ window.onscroll = () => {
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
 
-// for gallary portfolios start
+// for gallary portfolios start===============
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -76,6 +76,6 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-// for gallary portfolios end
+// for gallary portfolios end=================
 
 
