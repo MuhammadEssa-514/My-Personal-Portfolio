@@ -815,7 +815,9 @@ width: 0;
 .mainbox{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .myteam{
     font-size: 5rem;
@@ -828,6 +830,7 @@ width: 0;
     height: 200px;
     border: 1px solid rgb(13, 236, 13);
     perspective: 300px; 
+    margin: auto;
   }
   
   .flip-box-inner {
@@ -849,6 +852,7 @@ width: 0;
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
+    font-size: 12px;
   }
   
   .flip-box-front {
