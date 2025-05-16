@@ -43,39 +43,31 @@ window.onscroll = () => {
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
 
-// for gallary portfolios start===============
+// for gallary project start===============
 
-let slideIndex = 1;
-showSlides(slideIndex);
+  function filterProjects(category) {
+    const buttons = document.querySelectorAll(".filters button");
+    buttons.forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    const cards = document.querySelectorAll(".project-card");
+    cards.forEach(card => {
+      if (category === "all" || card.dataset.category === category) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
 
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
 // for gallary portfolios end=================
 
 

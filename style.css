@@ -728,86 +728,186 @@ section:nth-child(odd) .animate.scroll,
 width: 0;
 }
 
-/* for gallary portfolio start======================*/
+/* for gallary projects start======================*/
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: white;
+    }
 
-* {
-    box-sizing: border-box;
-  }
-  
-  .contner {
-    position: relative;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  .cursor {
-    cursor: pointer;
-  }
-  
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 15%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .column {
-    float: left;
-    width: 16.66%;
-  }
-  
-  .demo {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+}
 
-/* for gallary portfolio end */
+.filters button {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 46px;
+  font-size: 18px;
+  border: none;
+  background: rgb(7, 190, 26);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.filters button::before {
+  content: '';
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(255, 0, 0, 0.404); /* Light white overlay */
+  transition: right 0.4s ease;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.filters button:hover::before {
+  right: 0;
+}
+
+.filters button span {
+  position: relative;
+  z-index: 2; /* Keep text above the sliding overlay */
+}
+
+.filters button.active {
+  background: white;
+  color: black;
+}
+
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+   /* Base: 1 column for mobile (default) */
+.portfolio {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: 1fr; /* default = 1 column */
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 1024px) {
+  .portfolio {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
+    .project-card {
+      position: relative;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      opacity: 0;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .project-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay .icons {
+      display: flex;
+      gap: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .overlay .text {
+      margin-top: 10px;
+    }
+
+    .overlay .text h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .overlay .text p {
+      font-size: 14px;
+      margin: 5px 0 0;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+/* for gallary projects end */
 
 
 /* for team flip images start */

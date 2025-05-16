@@ -21,7 +21,7 @@
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="./y.html">Projects</a>
             <a href="#Team">Team</a>
             <a href="#contuct">Contact</a>
             <a href="form.html">LogIn/LogOut</a>
@@ -221,7 +221,7 @@
 <!-- <div class="contner">
 
  Team members flip images start========================-->
-<section id="projects" class="projects">
+<section>
   <h2 style="font-size: 5rem; padding:30px;">My <span style="color: rgb(7, 190, 26);">Projects</span></h2>
 
 <div class="filters">
@@ -258,33 +258,36 @@
         <p>Modern admin dashboard interface.</p>
       </div>
     </div>
-  </div>  <div class="project-card" data-category="forms">
-    <img src="/images/portfolio/selvia dashboard.png" alt="Page Project">
-    <div class="overlay">
-      <div class="icons">
-        <span onclick="openLightbox('/images/portfolio/selvia dashboard.png')">👁️</span>
-        <a href="#" target="_blank" style="color:white;">🔗</a>
-      </div>
-      <div class="text">
-        <h4>Selvia Admin</h4>
-        <p>Modern admin dashboard interface.</p>
-      </div>
-    </div>
-  </div>  <div class="project-card" data-category="pages">
-    <img src="/images/portfolio/selvia dashboard.png" alt="Page Project">
-    <div class="overlay">
-      <div class="icons">
-        <span onclick="openLightbox('/images/portfolio/selvia dashboard.png')">👁️</span>
-        <a href="#" target="_blank" style="color:white;">🔗</a>
-      </div>
-      <div class="text">
-        <h4>Selvia Admin</h4>
-        <p>Modern admin dashboard interface.</p>
-      </div>
-    </div>
-  </div> 
+  </div>
   
- 
+
+    <div class="project-card" data-category="pages">
+    <img src="/images/portfolio/selvia dashboard.png" alt="Page Project">
+    <div class="overlay">
+      <div class="icons">
+        <span onclick="openLightbox('/images/portfolio/selvia dashboard.png')">👁️</span>
+        <a href="#" target="_blank" style="color:white;">🔗</a>
+      </div>
+      <div class="text">
+        <h4>Selvia Admin</h4>
+        <p>Modern admin dashboard interface.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card" data-category="forms">
+    <img src="/images/portfolio/quran dashboard.png" alt="Forms Project">
+    <div class="overlay">
+      <div class="icons">
+        <span onclick="openLightbox('/images/portfolio/quran dashboard.png')">👁️</span>
+        <a href="#" target="_blank" style="color:white;">🔗</a>
+      </div>
+      <div class="text">
+        <h4>Quran Dashboard</h4>
+        <p>Islamic UI with prayer and Quran features.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Lightbox -->
@@ -293,6 +296,31 @@
   <img id="lightbox-img" src="">
 </div>
 
+<!-- <script>
+  function filterProjects(category) {
+    const buttons = document.querySelectorAll(".filters button");
+    buttons.forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+
+    const cards = document.querySelectorAll(".project-card");
+    cards.forEach(card => {
+      if (category === "all" || card.dataset.category === category) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script> -->
 
 </section>
 
